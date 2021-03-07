@@ -1,4 +1,10 @@
 [build]
   command = "yarn build"
-  functions = "dist"
-  publish = "public"
+  publish = "dist"
+  functions = "public"
+  environment = { NODE_VERSION = "14" }
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
